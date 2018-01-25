@@ -68,7 +68,7 @@
             {!! $info->content !!}
             <br>
 
-            <button><a href="{{ url($info->id+1) }}">下一篇</a></button>
+            <button type="button" class="next btn btn-w-m btn-info"><a href="{{ url($info->id+1) }}" style="color: royalblue">下一篇</a></button>
         </div>
     </body>
 </html>
