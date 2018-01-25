@@ -6,13 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>陈一锑的小说站-2018-1-25</title>
-        {{--<link href="{{ asset('bootstrap/css/bootstrap.css') }}"rel="stylesheet" >--}}
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <script href="{{ asset('js/js.css') }}"></script>
-        {{--<script href="{{ asset('bootstrap/js/bootstrap.js') }}"></script>--}}
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
         <!-- Styles -->
         <style>
             html, body {
@@ -69,33 +64,11 @@
     </head>
     <body>
         <div class="container">
-            <div class="content">
-                <div class="panel panel-default ">
-                    <!-- Default panel contents -->
-                    <div class="panel-heading">天道图书馆--by,cyt</div>
-                    <!-- Table -->
-                    <table class="table table-bordered">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th align="center">标题</th>
-                            <th>创建时间</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($list as $item)
-                            <tr>
-                                <td>#</td>
-                                <td><a href="{{ url($item->id) }}">{{ $item->title }}</a></td>
-                                <td></td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                    {{ $list->links() }}
-                </div>
-            </div>
-        </div>
+            <h2>{{ $info->title }}</h2>
+            {!! $info->content !!}
+            <br>
 
+            <button><a href="{{ url($info->id+1) }}">下一篇</a></button>
+        </div>
     </body>
 </html>
