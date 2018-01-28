@@ -75,7 +75,10 @@
                         下一篇
                     </button>
                 </div>
-                <div class="col-md-4"></div>
+                <div class="col-md-4"><button type="button" class="next btn btn-w-m btn-info btn-lg ">
+                        <input type="hidden" class="next_page" value="{{ url($info->id+1) }}">
+                        下一篇
+                    </button></div>
             </div>
 
         </div>
